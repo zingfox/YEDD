@@ -14,5 +14,8 @@
     <string name="show_blog">SHOW BLOG</string>
 
     <string name="title">Title</string>
+    <string name="title_activity_blog_feed">BlogFeedActivity</string>
+
+    <string name="hello_world">Hello world!</string>
 
 </resources>
