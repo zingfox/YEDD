@@ -7,43 +7,34 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 
 /**
- * Created by Zing on 7/3/2015.
+ * Created by Zing on 7/6/2015.
  */
-public class LoginActivity extends ActionBarActivity {
+public class RegisterActivity extends ActionBarActivity {
 
     private EditText username;
     private EditText password;
-    private Button login;
-    private TextView register;
+    private EditText comfirmPaassword;
+    private Button signUp;
 
     private Context context = this;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+
+        setContentView(R.layout.activity_register);
 
         username = (EditText) findViewById(R.id.username);
         password = (EditText) findViewById(R.id.password);
-        login = (Button) findViewById(R.id.login);
-        register = (TextView) findViewById(R.id.register);
+        comfirmPaassword = (EditText) findViewById(R.id.confirm_password);
+        signUp = (Button) findViewById(R.id.sign_up);
 
-        login.setOnClickListener(new View.OnClickListener() {
+        signUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-            Intent intent = new Intent(context, FunctionActivity.class);
-            startActivity(intent);
-            finish();
-            }
-        });
-
-        register.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(context, RegisterActivity.class);
+                Intent intent = new Intent(context, LoginActivity.class);
                 startActivity(intent);
                 finish();
             }

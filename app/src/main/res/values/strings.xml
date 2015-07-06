@@ -5,10 +5,14 @@
     <string name="login">LOGIN</string>
     <string name="username">Username</string>
     <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
 
     <string name="register">New User? Register here</string>
+    <string name="sign_up">Sign Up</string>
+
+    <string name="create_blog">CREATE BLOG</string>
+    <string name="show_blog">SHOW BLOG</string>
 
     <string name="title">Title</string>
-    <string name="create_blog">CREATE BLOG</string>
 
 </resources>
