@@ -14,7 +14,6 @@ public class FunctionActivity extends ActionBarActivity{
 
     private Button createBlog;
     private Button showBlog;
-
     private Context context = this;
 
     @Override
@@ -29,6 +28,15 @@ public class FunctionActivity extends ActionBarActivity{
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(context, CreateBlogActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        showBlog.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, BlogFeedActivity.class);
                 startActivity(intent);
                 finish();
             }
