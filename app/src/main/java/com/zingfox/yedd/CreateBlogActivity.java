@@ -11,13 +11,15 @@ import android.widget.EditText;
  */
 public class CreateBlogActivity extends ActionBarActivity {
 
-    EditText title;
-    Button save;
-    Context mContext;
+    private EditText title;
+    private Button post;
+    private Context context;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_blog);
+
+        title = (EditText) findViewById(R.id.title);
     }
 }

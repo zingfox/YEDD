@@ -23,7 +23,7 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/post"
+        android:id="@+id/story"
         android:layout_marginTop="46dp"
         android:layout_below="@+id/title"
         android:layout_alignParentLeft="true"
@@ -32,4 +32,18 @@
         android:layout_alignParentEnd="true"
         android:hint="Write some story"
         android:textColorHint="@color/hint_color" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/post"
+        android:id="@+id/post"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="30dp"
+        android:textColor="@color/primary_color"
+        android:background="@color/secondary_color" />
 </RelativeLayout>
