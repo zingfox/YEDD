@@ -2,13 +2,13 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#690069">
+    android:background="@color/primary_color">
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/username"
-        android:textColorHint="#ffbbbb00"
+        android:textColorHint="@color/hint_color"
         android:hint="@string/username"
         android:layout_alignWithParentIfMissing="false"
         android:layout_alignParentTop="true"
@@ -23,7 +23,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/password"
         android:layout_marginTop="30dp"
-        android:textColorHint="#ffbbbb00"
+        android:textColorHint="@color/hint_color"
         android:hint="@string/password"
         android:layout_below="@+id/username"
         android:layout_alignLeft="@+id/username"
@@ -35,7 +35,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/confirm_password"
-        android:textColorHint="#ffbbbb00"
+        android:textColorHint="@color/hint_color"
         android:hint="@string/confirm_password"
         android:layout_below="@+id/password"
         android:layout_alignRight="@+id/password"
@@ -54,8 +54,8 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:textColor="#690069"
+        android:textColor="@color/primary_color"
         android:textSize="25dp"
-        android:background="#ffff00" />
+        android:background="@color/secondary_color" />
 
 </RelativeLayout>
