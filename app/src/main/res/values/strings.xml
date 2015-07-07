@@ -16,6 +16,6 @@
     <string name="title">Title</string>
     <string name="title_activity_blog_feed">BlogFeedActivity</string>
 
-    <string name="hello_world">Hello world!</string>
+    <string name="post">Post</string>
 
 </resources>
