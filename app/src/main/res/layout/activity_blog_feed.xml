@@ -31,7 +31,7 @@
                 android:textSize="20dp"
                 android:textColor="@android:color/white"
                 android:textAlignment="center"
-                android:text="3======================>"/>
+                android:text="Blog Feed"/>
 
         </android.support.v7.widget.Toolbar>
     </LinearLayout>

@@ -4,7 +4,7 @@
         name="AppTheme"
         parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">#690069</item>
+        <item name="colorPrimary">#6f3d94</item>
         <item name="colorPrimaryDark">#ffff00</item>
         <item name="colorAccent">#bbbb00</item>
         <item name="windowActionBar">false</item>
