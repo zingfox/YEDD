@@ -7,33 +7,54 @@
     android:background="@color/primary_color"
     android:touchscreenBlocksFocus="false">
 
-    <EditText
-        android:layout_width="wrap_content"
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/title"
-        android:textColor="#ffffff"
-        android:textColorHint="@color/hint_color"
-        android:hint="Title"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="50dp"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_marginTop="60dp"
+        android:id="@+id/view">
 
-    <EditText
-        android:layout_width="wrap_content"
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/title"
+            android:textColor="#ffffff"
+            android:textColorHint="@color/hint_color"
+            android:hint="Title"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:singleLine="true" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/story"
-        android:layout_marginTop="46dp"
-        android:layout_below="@+id/title"
+        android:layout_below="@+id/view"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:hint="Write some story"
-        android:textColorHint="@color/hint_color"
-        android:textColor="#ffffff" />
+        android:id="@+id/editText2">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/story"
+            android:hint="Story"
+            android:textColorHint="@color/hint_color"
+            android:textColor="#ffffff"
+            android:layout_above="@+id/post"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="143dp"
+            android:singleLine="false" />
+
+    </android.support.design.widget.TextInputLayout>
 
     <Button
         android:layout_width="wrap_content"
@@ -54,12 +75,12 @@
         android:layout_height="wrap_content"
         android:text="140"
         android:id="@+id/text_count"
-        android:layout_marginRight="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_below="@+id/story"
+        android:textSize="20dp"
+        android:textColor="#ff00ff00"
+        android:layout_below="@+id/editText2"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="10dp"
-        android:textSize="20dp"
-        android:textColor="#ff00ff00" />
+        android:layout_marginRight="30dp"
+        android:layout_marginEnd="30dp" />
+
 </RelativeLayout>
