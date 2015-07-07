@@ -1,17 +1,40 @@
 package com.zingfox.yedd;
 
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.FrameLayout;
 
 
 public class BlogFeedActivity extends ActionBarActivity {
+
+    FrameLayout rootLayout;
+    FloatingActionButton newBlogBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_blog_feed);
+
+        rootLayout = (FrameLayout) findViewById(R.id.rootLayout);
+        newBlogBtn = (FloatingActionButton) findViewById(R.id.newBlogBtn);
+        newBlogBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Snackbar.make(rootLayout, "Hello. I am blog!", Snackbar.LENGTH_SHORT)
+                        .setAction("Undo", new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+
+                            }
+                        })
+                .show();
+            }
+        });
     }
 
     @Override

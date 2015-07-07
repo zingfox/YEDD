@@ -34,10 +34,27 @@
                 android:textSize="20dp"
                 android:textColor="@android:color/white"
                 android:textAlignment="center"
-                android:text="3===>"/>
+                android:text="3======================>"/>
 
         </android.support.v7.widget.Toolbar>
-
     </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/rootLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/newBlogBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:src="@drawable/ic_arrow"
+            app:fabSize="normal"
+            android:layout_marginRight="@dimen/new_blog_margin_right"
+            android:layout_marginBottom="@dimen/new_blog_margin_bottom"
+            app:borderWidth="0dp"/>
+
+    </FrameLayout>
 
 </android.support.v4.widget.DrawerLayout>
