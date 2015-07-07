@@ -3,6 +3,7 @@ package com.zingfox.yedd;
 
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.design.widget.TabLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -15,18 +16,25 @@ public class BlogFeedActivity extends ActionBarActivity {
 
     FrameLayout rootLayout;
     FloatingActionButton newBlogBtn;
+    TabLayout tabLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_blog_feed);
 
+        tabLayout = (TabLayout) findViewById(R.id.tabLayout);
+        tabLayout.addTab(tabLayout.newTab().setText("Feed"));
+        tabLayout.addTab(tabLayout.newTab().setText("Noti"));
+        tabLayout.addTab(tabLayout.newTab().setText("Friend"));
+        tabLayout.addTab(tabLayout.newTab().setText("Fav"));
+
         rootLayout = (FrameLayout) findViewById(R.id.rootLayout);
         newBlogBtn = (FloatingActionButton) findViewById(R.id.newBlogBtn);
         newBlogBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Snackbar.make(rootLayout, "Hello. I am blog!", Snackbar.LENGTH_SHORT)
+                Snackbar.make(rootLayout, "YeddddddDDDD", Snackbar.LENGTH_SHORT)
                         .setAction("Undo", new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
