@@ -1,10 +1,13 @@
 package com.zingfox.yedd;
 
+import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.view.Menu;
+import android.view.MenuItem;
 
 
 public class BlogFeedActivity extends ActionBarActivity {
-/*
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +35,4 @@ public class BlogFeedActivity extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
-    */
-
 }

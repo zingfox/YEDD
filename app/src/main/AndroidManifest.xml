@@ -29,6 +29,7 @@
             android:name=".BlogFeedActivity"
             android:label="@string/title_activity_blog_feed" >
         </activity>
+
     </application>
 
 </manifest>
