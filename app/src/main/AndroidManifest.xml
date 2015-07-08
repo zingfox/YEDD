@@ -20,11 +20,9 @@
             android:name=".RegisterActivity"
             android:label="@string/app_name" />
         <activity
-            android:name=".FunctionActivity"
-            android:label="@string/app_name" />
-        <activity
             android:name=".CreateBlogActivity"
             android:label="@string/app_name" />
+
         <activity
             android:name=".BlogFeedActivity"
             android:label="@string/title_activity_blog_feed" >

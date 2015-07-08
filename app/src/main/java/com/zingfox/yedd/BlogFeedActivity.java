@@ -14,9 +14,14 @@ import android.widget.FrameLayout;
 
 public class BlogFeedActivity extends ActionBarActivity {
 
-    FrameLayout rootLayout;
-    FloatingActionButton newBlogBtn;
-    TabLayout tabLayout;
+    private FrameLayout rootLayout;
+    private FloatingActionButton newBlogBtn;
+    private TabLayout tabLayout;
+
+    //private ListView blogListView;
+    //private List<Blog> blogs;
+    //private FeedAdapter feedAdapter;
+    //private Context context = this;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +35,7 @@ public class BlogFeedActivity extends ActionBarActivity {
         tabLayout.addTab(tabLayout.newTab().setText("Fav"));
 
         rootLayout = (FrameLayout) findViewById(R.id.rootLayout);
+
         newBlogBtn = (FloatingActionButton) findViewById(R.id.newBlogBtn);
         newBlogBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,12 +44,20 @@ public class BlogFeedActivity extends ActionBarActivity {
                         .setAction("Undo", new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
-
+                                //Intent intent = new Intent(context, CreateBlogActivity.class);
+                                //startActivity(intent);
+                                //finish();
                             }
                         })
                 .show();
             }
         });
+
+        //blogListView = (ListView) findViewById(R.id.blog_list);
+
+        //inputBlog();
+        //feedAdapter = new FeedAdapter(this, blogs);
+        //blogListView.setAdapter(feedAdapter);
     }
 
     @Override
@@ -66,4 +80,13 @@ public class BlogFeedActivity extends ActionBarActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
+    /*
+    private void inputBlog() {
+        blogs.add(new Blog("TEST"));
+        blogs.add(new Blog("YEDD"));
+        blogs.add(new Blog("NOOO"));
+    }
+    */
 }
+

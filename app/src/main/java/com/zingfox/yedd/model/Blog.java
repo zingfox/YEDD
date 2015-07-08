@@ -11,6 +11,10 @@ public class Blog {
     private String title;
     private List<Story> stories;
 
+    public Blog(String title) {
+        this.title = title;
+    }
+
     public long getId() {
         return id;
     }

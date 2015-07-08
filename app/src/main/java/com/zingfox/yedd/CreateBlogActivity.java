@@ -38,7 +38,7 @@ public class CreateBlogActivity extends ActionBarActivity {
         post.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context, FunctionActivity.class);
+                Intent intent = new Intent(context, BlogFeedActivity.class);
                 startActivity(intent);
                 finish();
             }
