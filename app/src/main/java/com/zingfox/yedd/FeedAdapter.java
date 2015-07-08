@@ -47,7 +47,7 @@ public class FeedAdapter extends BaseAdapter {
 
         if(convertView == null) {
 
-            convertView = inflater.inflate(R.layout.activity_blog_feed, parent, false);
+            convertView = inflater.inflate(R.layout.activity_main_feed, parent, false);
 
             //title = (TextView) convertView.findViewById(R.id.blog);
 

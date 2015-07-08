@@ -17,5 +17,9 @@
     <string name="title_activity_blog_feed">BlogFeedActivity</string>
 
     <string name="post">Post</string>
+    <string name="title_activity_story_feed">StoryFeedActivity</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="txt_yo_yo">Yo Yo</string>
 
 </resources>

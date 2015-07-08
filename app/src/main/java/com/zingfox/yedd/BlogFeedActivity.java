@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TabLayout;
 import android.support.v7.app.ActionBarActivity;
+import android.view.Menu;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ListView;
@@ -28,7 +29,7 @@ public class BlogFeedActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_blog_feed);
+        setContentView(R.layout.activity_main_feed);
 
         tabLayout = (TabLayout) findViewById(R.id.tabLayout);
         tabLayout.addTab(tabLayout.newTab().setText("Feed"));
@@ -55,11 +56,17 @@ public class BlogFeedActivity extends ActionBarActivity {
         //blogListView.setAdapter(feedAdapter);
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_blog_feed, menu);
+        return true;
+    }
+
     private void inputBlog() {
         blogs.add(new Blog("TEST"));
         blogs.add(new Blog("YEDD"));
         blogs.add(new Blog("NOOO"));
     }
-
 }
 
