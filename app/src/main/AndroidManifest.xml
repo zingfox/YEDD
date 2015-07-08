@@ -22,12 +22,14 @@
         <activity
             android:name=".CreateBlogActivity"
             android:label="@string/app_name" />
-
         <activity
             android:name=".BlogFeedActivity"
             android:label="@string/title_activity_blog_feed" >
         </activity>
-
+        <activity
+            android:name=".StoryFeedActivity"
+            android:label="@string/title_activity_story_feed" >
+        </activity>
     </application>
 
 </manifest>

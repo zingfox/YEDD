@@ -11,44 +11,47 @@
         android:layout_gravity="start"
         app:menu="@menu/navigation_drawer_items"/>
 
-    <LinearLayout
+    <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <android.support.v7.widget.Toolbar
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/primary_color"
-            android:elevation="4dp"
-            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-            android:id="@+id/toolbar"
-            android:visibility="visible">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-            <TextView
+            <android.support.v7.widget.Toolbar
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="20dp"
-                android:textColor="@android:color/white"
-                android:textAlignment="center"
-                android:text="Blog Feed"/>
+                android:background="@color/primary_color"
+                android:elevation="4dp"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                android:id="@+id/toolbar"
+                android:visibility="visible">
 
-        </android.support.v7.widget.Toolbar>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="20dp"
+                        android:textColor="@android:color/white"
+                        android:textAlignment="center"
+                        android:text="Blog Feed"/>
 
-        <android.support.design.widget.TabLayout
-            app:tabTextColor="#ffffff"
-            android:id="@+id/tabLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/primary_color" />
+            </android.support.v7.widget.Toolbar>
 
-        <ListView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/listView"
-            />
+            <android.support.design.widget.TabLayout
+                app:tabTextColor="#ffffff"
+                android:id="@+id/tabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/primary_color">
+                
+            </android.support.design.widget.TabLayout>
 
-    </LinearLayout>
+            <include layout="@layout/long_content"/>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
 
     <FrameLayout
         android:id="@+id/rootLayout"
@@ -67,5 +70,6 @@
             app:borderWidth="0dp"/>
 
     </FrameLayout>
+
 
 </android.support.v4.widget.DrawerLayout>

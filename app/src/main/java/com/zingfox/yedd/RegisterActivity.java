@@ -40,9 +40,10 @@ public class RegisterActivity extends ActionBarActivity {
             }
         });
     }
-
     @Override
     public void onBackPressed() {
-        super.onBackPressed();
+        Intent intent = new Intent(context, LoginActivity.class);
+        startActivity(intent);
+        finish();
     }
 }

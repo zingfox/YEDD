@@ -1,6 +1,8 @@
 package com.zingfox.yedd;
 
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -21,7 +23,7 @@ public class BlogFeedActivity extends ActionBarActivity {
     //private ListView blogListView;
     //private List<Blog> blogs;
     //private FeedAdapter feedAdapter;
-    //private Context context = this;
+    private Context context = this;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,6 +81,12 @@ public class BlogFeedActivity extends ActionBarActivity {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(context, LoginActivity.class);
+        startActivity(intent);
+        finish();
     }
 
     /*
