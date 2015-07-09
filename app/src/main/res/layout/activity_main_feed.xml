@@ -46,7 +46,10 @@
                 android:layout_height="wrap_content"
                 android:background="@color/primary_color"/>
 
-            <include layout="@layout/bloglist"/>
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="466dp"
+                android:id="@+id/listView" />
 
         </LinearLayout>
 

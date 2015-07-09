@@ -33,12 +33,12 @@ public class ShowBlogList extends ActionBarActivity {
 
     private ListView mListView;
     private BlogAdapter mAdapter;
-    private Context context;
+    private Context context = this;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.bloglist);
+        setContentView(R.layout.activity_main_feed);
 
         mListView = (ListView) findViewById(R.id.listView);
 

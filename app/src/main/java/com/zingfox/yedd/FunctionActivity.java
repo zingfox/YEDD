@@ -29,6 +29,8 @@ public class FunctionActivity extends ActionBarActivity {
         main.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //new ShowBlogList();
+
                 goTo(MainFeedActivity.class);
             }
         });

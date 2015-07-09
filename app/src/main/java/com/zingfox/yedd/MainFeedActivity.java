@@ -14,15 +14,13 @@ public class MainFeedActivity extends ActionBarActivity {
     private FrameLayout rootLayout;
     private FloatingActionButton newBlogBtn;
     private TabLayout tabLayout;
-;
+
     private Context context = this;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_feed);
-
-        new ShowBlogList();
 
         rootLayout = (FrameLayout) findViewById(R.id.rootLayout);
 
