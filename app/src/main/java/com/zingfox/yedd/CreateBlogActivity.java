@@ -38,7 +38,7 @@ public class CreateBlogActivity extends ActionBarActivity {
         post.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context, BlogFeedActivity.class);
+                Intent intent = new Intent(context, FunctionActivity.class);
                 startActivity(intent);
                 finish();
             }
@@ -71,4 +71,11 @@ public class CreateBlogActivity extends ActionBarActivity {
             }
         }
     };
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(context, FunctionActivity.class);
+        startActivity(intent);
+        finish();
+    }
 }

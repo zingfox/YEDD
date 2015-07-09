@@ -1,41 +1,61 @@
 package com.zingfox.yedd.model;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.util.List;
 
 /**
  * Created by Zing on 7/6/2015.
  */
 public class Blog {
+    String status;
 
-    private long id;
-    private String title;
-    private List<Story> stories;
+    int count;
 
-    public Blog(String title) {
-        this.title = title;
+    @SerializedName("count_total")
+    int totalCount;
+
+    int pages;
+
+    List<Post> posts;
+
+    public String getStatus() {
+        return status;
     }
 
-    public long getId() {
-        return id;
+    public void setStatus(String status) {
+        this.status = status;
     }
 
-    public void setId(long id) {
-        this.id = id;
+    public int getCount() {
+        return count;
     }
 
-    public String getTitle() {
-        return title;
+    public void setCount(int count) {
+        this.count = count;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public int getTotalCount() {
+        return totalCount;
     }
 
-    public List<Story> getStories() {
-        return stories;
+    public void setTotalCount(int totalCount) {
+        this.totalCount = totalCount;
     }
 
-    public void setStories(List<Story> stories) {
-        this.stories = stories;
+    public int getPages() {
+        return pages;
+    }
+
+    public void setPages(int pages) {
+        this.pages = pages;
+    }
+
+    public List<Post> getPosts() {
+        return posts;
+    }
+
+    public void setPosts(List<Post> posts) {
+        this.posts = posts;
     }
 }
