@@ -9,34 +9,20 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.View;
 import android.widget.FrameLayout;
-import android.widget.ListView;
-
-import com.zingfox.yedd.model.Blog;
-
-import java.util.List;
 
 public class BlogFeedActivity extends ActionBarActivity {
 
     private FrameLayout rootLayout;
     private FloatingActionButton newBlogBtn;
     private TabLayout tabLayout;
-
-    private ListView blogListView;
-    private List<Blog> blogs;
-    //private FeedAdapter feedAdapter;
+;
     private Context context = this;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_feed);
-
-        tabLayout = (TabLayout) findViewById(R.id.tabLayout);
-        tabLayout.addTab(tabLayout.newTab().setText("Feed"));
-        tabLayout.addTab(tabLayout.newTab().setText("Noti"));
-        tabLayout.addTab(tabLayout.newTab().setText("Friend"));
-        tabLayout.addTab(tabLayout.newTab().setText("Fav"));
-
+        
         rootLayout = (FrameLayout) findViewById(R.id.rootLayout);
 
         newBlogBtn = (FloatingActionButton) findViewById(R.id.newBlogBtn);
@@ -49,11 +35,6 @@ public class BlogFeedActivity extends ActionBarActivity {
             }
         });
 
-        //blogListView = (ListView) findViewById(R.id.listView);
-
-        //inputBlog();
-        //feedAdapter = new FeedAdapter(this, blogs);
-        //blogListView.setAdapter(feedAdapter);
     }
 
     @Override
@@ -61,12 +42,6 @@ public class BlogFeedActivity extends ActionBarActivity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_blog_feed, menu);
         return true;
-    }
-
-    private void inputBlog() {
-        blogs.add(new Blog("TEST"));
-        blogs.add(new Blog("YEDD"));
-        blogs.add(new Blog("NOOO"));
     }
 }
 

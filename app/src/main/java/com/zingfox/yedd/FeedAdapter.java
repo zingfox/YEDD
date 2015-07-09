@@ -18,8 +18,9 @@ import java.util.List;
 public class FeedAdapter extends BaseAdapter {
 
     private LayoutInflater inflater;
-    List<Blog> blogs;
-    TextView title;
+    private List<Blog> blogs;
+    private ViewHolder viewHolder;
+    private Blog blog;
 
     public FeedAdapter(Activity activity, List<Blog> blogs) {
         inflater = (LayoutInflater) activity.getSystemService(
@@ -47,16 +48,25 @@ public class FeedAdapter extends BaseAdapter {
 
         if(convertView == null) {
 
-            convertView = inflater.inflate(R.layout.activity_main_feed, parent, false);
+            convertView = inflater.inflate(R.layout.blog, parent, false);
 
-            //title = (TextView) convertView.findViewById(R.id.blog);
+            viewHolder = new ViewHolder();
+            viewHolder.title = (TextView) convertView.findViewById(R.id.blog_title);
 
-            convertView.setTag(title);
+            convertView.setTag(viewHolder);
+
         }else {
-            title = (TextView) convertView.getTag();
+            viewHolder = (ViewHolder) convertView.getTag();
         }
+
+        blog = blogs.get(position);
+
+        viewHolder.title.setText(blog.getTitle());
 
         return convertView;
     }
 
+    private static class ViewHolder {
+        TextView title;
+    }
 }

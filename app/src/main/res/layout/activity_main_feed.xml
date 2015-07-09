@@ -23,13 +23,11 @@
 
             <android.support.v7.widget.Toolbar
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:background="@color/primary_color"
                 android:elevation="4dp"
                 android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-                android:id="@+id/toolbar"
-                android:visibility="visible"
-                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+                android:id="@+id/toolbar">
 
                 <TextView
                     android:layout_width="match_parent"
@@ -38,16 +36,6 @@
                     android:textColor="@android:color/white"
                     android:textAlignment="center"
                     android:text="Blog Feed"/>
-=======
-                android:visibility="visible">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textSize="20dp"
-                        android:textColor="@android:color/white"
-                        android:textAlignment="center"
-                        android:text="Blog Feed"/>
 
             </android.support.v7.widget.Toolbar>
 
@@ -56,7 +44,9 @@
                 android:id="@+id/tabLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/primary_color" />
+                android:background="@color/primary_color"/>
+
+            <include layout="@layout/bloglist"/>
 
         </LinearLayout>
 
